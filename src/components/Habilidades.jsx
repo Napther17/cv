@@ -34,7 +34,11 @@ const habilidades = [
 ];
 
 const Habilidades = () => {
-  const images = ['slide1.png', 'slide2.png', 'slide3.png'];
+  const images = [
+    `${import.meta.env.BASE_URL}slide1.png`,
+    `${import.meta.env.BASE_URL}slide2.png`,
+    `${import.meta.env.BASE_URL}slide3.png`
+  ];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
