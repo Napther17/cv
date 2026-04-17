@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mauricio Esteban Báez Bascour - Digital CV</title>
+    <!-- SEO -->
+    <meta name="description" content="Perfil Profesional Académico: Mauricio Esteban Báez Bascour. Técnico Electrónico & Ingeniero en Marketing. Experto en Jefatura de Operaciones.">
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <!-- Tailwind CDN with Custom Config -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3f3bbd",
+                        "primary-container": "#5856d6",
+                        "on-surface": "#1a1c1f",
+                        "on-surface-variant": "#464554",
+                        "surface": "#f9f9fe",
+                        "surface-container-low": "#f3f3f8",
+                        "surface-container-high": "#e8e8ed",
+                        "outline-variant": "#c7c4d6",
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
+        .bento-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .bento-card:hover { transform: translateY(-8px); border-color: rgba(63, 59, 189, 0.2); box-shadow: 0 20px 40px -15px rgba(63, 59, 189, 0.1); }
+        .logo-img { height: 40px; width: auto; object-fit: contain; }
+        .profile-img { width: 100%; height: 100%; object-fit: cover; }
+        .text-overlay { background: linear-gradient(to top, rgba(63, 59, 189, 0.9), transparent); }
+    </style>
+</head>
+<body class="bg-[#f9f9fe] text-[#1a1c1f] antialiased">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 py-6 border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+            <div class="flex items-center gap-4 group cursor-pointer">
+                <img src="logo_mauix.png" alt="MAUIX Intelligence" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <div class="hidden flex items-center gap-2">
+                    <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white font-bold text-xl">M</div>
+                    <div class="flex flex-col leading-tight">
+                        <span class="font-bold text-lg tracking-tight">MAUIX</span>
+                        <span class="text-[10px] uppercase tracking-widest text-primary font-bold">Intelligence</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#inicio" class="text-sm font-medium hover:text-primary transition-colors">Inicio</a>
+                <a href="#trayectoria" class="text-sm font-medium hover:text-primary transition-colors">Trayectoria</a>
+                <a href="#formacion" class="text-sm font-medium hover:text-primary transition-colors">Formación</a>
+                <a href="#contacto" class="text-sm font-medium hover:text-primary transition-colors">Contacto</a>
+                <button class="bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition-all">Download CV</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24 space-y-32 mb-32">
+        <!-- Hero Section -->
+        <section id="inicio" class="px-6 md:px-12 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">
+                    <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    Disponible para Nuevos Desafíos
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black tracking-tight leading-[1.1]">
+                    Precisión <span class="text-primary italic">Técnica</span>.<br>
+                    Visión <span class="text-primary-container">Estratégica</span>.
+                </h1>
+                <p class="text-lg md:text-xl text-on-surface-variant font-medium leading-relaxed max-w-2xl">
+                    Estratega con formación dual: integra la precisión técnica de un <span class="text-on-surface font-bold underline decoration-primary/30">Técnico Electrónico</span> con la visión directiva de un <span class="text-on-surface font-bold underline decoration-primary/30">Ingeniero en Marketing</span>.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#trayectoria" class="bg-primary text-white px-8 py-4 rounded-full font-bold shadow-xl shadow-primary/20 hover:scale-105 transition-all">Explorar Trayectoria</a>
+                    <a href="#contacto" class="bg-surface-container-high text-on-surface px-8 py-4 rounded-full font-bold hover:bg-surface-variant transition-all">Contactar</a>
+                </div>
+            </div>
+            <div class="relative flex justify-center">
+                <div class="w-full max-w-[450px] aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl bg-gradient-to-br from-primary to-primary-container relative">
+                     <!-- Profile Image -->
+                     <img src="perfil.jpg" alt="Mauricio Báez Bascour" class="profile-img" onerror="this.style.opacity='0.2'">
+                     
+                     <!-- Phrase Overlay -->
+                     <div class="absolute bottom-0 left-0 right-0 p-10 text-overlay text-white">
+                        <p class="text-xl font-bold leading-tight drop-shadow-lg">
+                            "Liderando la convergencia entre tecnología y resultados de negocio"
+                        </p>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bento Impact -->
+        <section class="px-6 md:px-12 max-w-7xl mx-auto space-y-16">
+            <div class="text-center space-y-4 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-5xl font-extrabold">Matriz de Competencias</h2>
+                <p class="text-on-surface-variant text-lg">Liderazgo operativo orientado a resultados.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="md:col-span-2 bento-card bg-primary/5 p-8 rounded-[2.5rem] border border-transparent">
+                    <div class="w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg"><span class="material-symbols-outlined text-3xl">leaderboard</span></div>
+                    <h3 class="text-2xl font-bold mb-4">Gestión Basada en Datos</h3>
+                    <p class="text-on-surface-variant text-lg leading-relaxed">Transformación de data operativa en estrategias comerciales. Optimización de KPIs con rigor analítico.</p>
+                </div>
+                <div class="bento-card bg-surface-container-low p-8 rounded-[2.5rem] border border-transparent">
+                    <div class="w-14 h-14 bg-on-surface text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg"><span class="material-symbols-outlined text-3xl">precision_manufacturing</span></div>
+                    <h3 class="text-2xl font-bold mb-4">Excelencia Técnica</h3>
+                    <p class="text-on-surface-variant leading-relaxed">Base sólida en hardware que garantiza control de calidad en terreno.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline -->
+        <section id="trayectoria" class="py-24 bg-white overflow-hidden">
+            <div class="px-6 md:px-12 max-w-7xl mx-auto">
+                <div class="text-center space-y-4 mb-20">
+                    <h2 class="text-4xl md:text-5xl font-black">Trayectoria Profesional</h2>
+                    <p class="text-on-surface-variant text-lg">Evolución constante y compromiso con la excelencia operativa.</p>
+                </div>
+
+                <div class="space-y-12">
+                    <div class="p-8 md:p-12 bg-primary/5 rounded-[2.5rem] border border-primary/20 hover:border-primary transition-all bento-card">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+                            <div>
+                                <span class="bg-primary text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Recinto Protegido</span>
+                                <h3 class="text-3xl font-black mt-2 text-primary">Jefe Técnico de Operaciones</h3>
+                            </div>
+                            <span class="text-on-surface-variant font-bold text-sm">Septiembre 2025 – Actualidad</span>
+                        </div>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-on-surface-variant leading-relaxed text-lg list-none">
+                            <li class="flex items-start gap-3"><span class="text-primary mt-1.5">•</span> Liderazgo estratégico del área de operaciones, enfocado en la capacitación y mejora continua de las competencias del equipo técnico interno.</li>
+                            <li class="flex items-start gap-3"><span class="text-primary mt-1.5">•</span> Gestión y búsqueda activa de instaladores a nivel nacional para asegurar la cobertura técnica y operativa en todas las regiones de Chile.</li>
+                            <li class="flex items-start gap-3"><span class="text-primary mt-1.5">•</span> Diseño y supervisión de la implementación de proyectos de seguridad crítica, incluyendo servicios de monitoreo de cámaras de última generación.</li>
+                            <li class="flex items-start gap-3"><span class="text-primary mt-1.5">•</span> Implementación de soluciones tecnológicas avanzadas mediante el uso de fibra óptica y sistemas autosustentables con paneles solares.</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-8 md:p-12 bg-surface-container-low rounded-[2.5rem] border border-transparent hover:border-primary/30 transition-all bento-card">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+                            <div>
+                                <span class="bg-on-surface text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">SMA</span>
+                                <h3 class="text-3xl font-black mt-2">Supervisor de Instalaciones y Proyecto</h3>
+                            </div>
+                            <span class="text-on-surface-variant font-bold text-sm">Año 2025 (4 meses)</span>
+                        </div>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-on-surface-variant leading-relaxed text-lg list-none">
+                            <li class="flex items-start gap-3"><span class="text-on-surface mt-1.5">•</span> Supervisión técnica en terreno de equipos técnicos, garantizando la correcta ejecución de instalaciones y el cumplimiento de estándares de calidad.</li>
+                            <li class="flex items-start gap-3"><span class="text-on-surface mt-1.5">•</span> Gestión integral de proyectos basada en el levantamiento de requerimientos específicos del cliente.</li>
+                            <li class="flex items-start gap-3"><span class="text-on-surface mt-1.5">•</span> Responsable de la cuantificación técnica de elementos y selección de hardware de alta gama, trabajando con marcas líderes como Dahua y sistemas de alarmas DSC.</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-8 md:p-12 bg-surface-container-low rounded-[2.5rem] border border-transparent hover:border-primary/30 transition-all bento-card">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+                            <div>
+                                <span class="bg-on-surface text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">SLAM</span>
+                                <h3 class="text-3xl font-black mt-2">Técnico Supervisor</h3>
+                            </div>
+                            <span class="text-on-surface-variant font-bold text-sm">2021 – 2024</span>
+                        </div>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-on-surface-variant leading-relaxed text-lg list-none">
+                            <li class="flex items-start gap-3"><span class="text-on-surface mt-1.5">•</span> Dirección de equipos especializados en instalación, mantenimiento y reparación de redes inalámbricas, cableado estructurado, CCTV y automatización.</li>
+                            <li class="flex items-start gap-3"><span class="text-on-surface mt-1.5">•</span> Elaboración de informes técnicos de gestión para documentar soluciones, indicencias y optimización de proyectos.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="px-6 md:px-12 max-w-7xl mx-auto">
+            <div class="bg-primary text-white p-12 md:p-20 rounded-[3rem] shadow-2xl relative overflow-hidden">
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="space-y-8">
+                        <h2 class="text-4xl md:text-6xl font-black italic text-white">¿Listo para el siguiente nivel?</h2>
+                        <div class="space-y-4 text-xl">
+                            <p class="flex items-center gap-4 font-bold"><span class="material-symbols-outlined">call</span> +56 9 77333465</p>
+                            <p class="flex items-center gap-4 font-bold"><span class="material-symbols-outlined">mail</span> mauricio.baez.bascour@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl space-y-6">
+                        <h3 class="text-2xl font-bold">Santiago, Chile</h3>
+                        <p class="opacity-80">Disponible para asesorías técnicas y gestión de proyectos de seguridad industrial de alta complejidad.</p>
+                        <a href="https://wa.me/56977333465" target="_blank" class="block w-full bg-white text-primary text-center py-4 rounded-xl font-bold hover:bg-opacity-90 transition-all shadow-lg scale-100 active:scale-95 duration-200">Contactar por WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-outline-variant text-center">
+        <p class="text-sm font-medium opacity-50">© 2024 Mauricio Esteban Báez Bascour. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('glass', 'shadow-sm', 'py-4');
+                nav.classList.remove('py-6');
+                nav.style.borderBottomColor = 'rgba(0,0,0,0.05)';
+            } else {
+                nav.classList.remove('glass', 'shadow-sm', 'py-4');
+                nav.classList.add('py-6');
+                nav.style.borderBottomColor = 'transparent';
+            }
+        });
+    </script>
+</body>
+</html>
