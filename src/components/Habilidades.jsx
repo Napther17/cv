@@ -34,7 +34,7 @@ const habilidades = [
 ];
 
 const Habilidades = () => {
-  const images = ['/slide1.png', '/slide2.png', '/slide3.png'];
+  const images = ['slide1.png', 'slide2.png', 'slide3.png'];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {

@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         <div className="flex items-center gap-2 group cursor-pointer">
           <img 
-            src="/logo.png" 
+            src="logo.png" 
             alt="MAUIX Intelligence" 
             className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
           />

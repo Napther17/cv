@@ -85,7 +85,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-primary-container/20 rounded-[2.5rem] -rotate-3 group-hover:-rotate-6 transition-transform duration-500 scale-105" />
               <div className="relative z-10 w-full max-w-[440px] rounded-[2.5rem] overflow-hidden shadow-2xl bg-surface-container">
                 <img 
-                  src="/perfil.jpg" 
+                  src="perfil.jpg" 
                   alt="Mauricio Báez - Perfil Profesional" 
                   className="block w-full h-auto aspect-[4/5] object-cover object-top" 
                 />
