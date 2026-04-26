@@ -32,12 +32,14 @@
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body {
   margin: 0;
   font-family: 'Inter', 'Outfit', sans-serif;
   line-height: 1.6;
+  background: #f9f9fe;
 }
 
 /* =========================================
@@ -155,7 +157,17 @@ p {
   animation: float 4s ease-in-out infinite;
 }
 
-/* =========================================
-   GOOGLE FONTS
-   ========================================= */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@700;800;900&display=swap');
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

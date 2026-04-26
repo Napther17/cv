@@ -33,20 +33,33 @@ const habilidades = [
   },
 ];
 
+const carouselImages = [
+  `${import.meta.env.BASE_URL}slide1.png`,
+  `${import.meta.env.BASE_URL}slide2.png`,
+  `${import.meta.env.BASE_URL}slide3.png`,
+];
+
 const Habilidades = () => {
-  const images = [
-    `${import.meta.env.BASE_URL}slide1.png`,
-    `${import.meta.env.BASE_URL}slide2.png`,
-    `${import.meta.env.BASE_URL}slide3.png`
-  ];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
+    const preloadNextImage = (index) => {
+      const nextImage = new window.Image();
+      nextImage.src = carouselImages[index];
+    };
+
+    preloadNextImage((currentImageIndex + 1) % carouselImages.length);
+
     const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+      if (document.hidden) {
+        return;
+      }
+
+      setCurrentImageIndex((prev) => (prev + 1) % carouselImages.length);
     }, 3000);
+
     return () => clearInterval(interval);
-  }, []);
+  }, [currentImageIndex]);
 
   return (
     <section id="habilidades" className="section-py bg-white overflow-hidden">
@@ -108,16 +121,14 @@ const Habilidades = () => {
               <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl aspect-[4/5] bg-surface-container">
                 
                 {/* Carousel Backgrounds */}
-                {images.map((img, idx) => (
-                  <img
-                    key={img}
-                    src={img}
-                    alt={`Habilidad Técnica ${idx + 1}`}
-                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-                      idx === currentImageIndex ? 'opacity-100' : 'opacity-0'
-                    }`}
-                  />
-                ))}
+                <img
+                  key={carouselImages[currentImageIndex]}
+                  src={carouselImages[currentImageIndex]}
+                  alt={`Habilidad Técnica ${currentImageIndex + 1}`}
+                  loading="lazy"
+                  decoding="async"
+                  className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100"
+                />
 
                 {/* Overlay content */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-10 text-center text-white bg-black/50 z-10">

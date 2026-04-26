@@ -1,6 +1,13 @@
 import React from 'react';
+import { CONTACT } from '../config/site';
 
 const Footer = () => {
+  const socialLinks = [
+    { label: 'LinkedIn', href: CONTACT.linkedinHref, external: true },
+    { label: 'WhatsApp', href: CONTACT.whatsappHref, external: true },
+    { label: 'Email', href: `mailto:${CONTACT.email}`, external: false },
+  ];
+
   return (
     <footer className="py-12 px-6 md:px-12 border-t border-outline-variant bg-surface">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
@@ -18,13 +25,15 @@ const Footer = () => {
         </div>
 
         <div className="flex gap-6">
-          {['LinkedIn', 'WhatsApp', 'Email'].map((social) => (
+          {socialLinks.map((social) => (
             <a 
-              key={social} 
-              href="#" 
+              key={social.label}
+              href={social.href}
+              target={social.external ? '_blank' : undefined}
+              rel={social.external ? 'noopener noreferrer' : undefined}
               className="text-xs font-bold uppercase tracking-widest text-on-surface hover:text-primary transition-colors underline decoration-outline-variant underline-offset-4"
             >
-              {social}
+              {social.label}
             </a>
           ))}
         </div>

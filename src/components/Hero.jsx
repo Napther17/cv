@@ -87,6 +87,9 @@ const Hero = () => {
                 <img 
                   src={`${import.meta.env.BASE_URL}perfil.jpg`} 
                   alt="Mauricio Báez - Perfil Profesional" 
+                  fetchPriority="high"
+                  loading="eager"
+                  decoding="async"
                   className="block w-full h-auto aspect-[4/5] object-cover object-top" 
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-8 pt-24 flex flex-col justify-end">

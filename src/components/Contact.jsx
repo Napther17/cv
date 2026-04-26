@@ -1,4 +1,5 @@
 import React from 'react';
+import { CONTACT } from '../config/site';
 
 const Contact = () => {
   return (
@@ -28,7 +29,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-white/60 text-sm font-bold uppercase tracking-wider mb-1">Ubicación</h4>
-                  <p className="text-xl font-medium">Santiago, Chile (Disponible para viajes)</p>
+                  <p className="text-xl font-medium">{CONTACT.location}</p>
                 </div>
               </div>
               
@@ -38,7 +39,9 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-white/60 text-sm font-bold uppercase tracking-wider mb-1">Teléfono</h4>
-                  <p className="text-xl font-medium">+56 9 33377465</p>
+                  <a href={CONTACT.phoneHref} className="text-xl font-medium hover:underline underline-offset-4">
+                    {CONTACT.phoneDisplay}
+                  </a>
                 </div>
               </div>
 
@@ -48,16 +51,18 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-white/60 text-sm font-bold uppercase tracking-wider mb-1">Email</h4>
-                  <p className="text-xl font-medium">mauricio.baez.bascour@gmail.com</p>
+                  <a href={`mailto:${CONTACT.email}`} className="text-xl font-medium break-all hover:underline underline-offset-4">
+                    {CONTACT.email}
+                  </a>
                 </div>
               </div>
             </div>
 
             <div className="pt-8">
               <a 
-                href="https://linkedin.com" 
+                href={CONTACT.linkedinHref}
                 target="_blank" 
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 px-6 py-3 rounded-full font-bold transition-all"
               >
                 Conectar en LinkedIn
@@ -80,9 +85,9 @@ const Contact = () => {
             </p>
             
             <a 
-              href="https://wa.me/56933377465?text=Hola%20Mauricio%2C%20estoy%20interesado%20en%20contactarte."
+              href={CONTACT.whatsappHref}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-4 px-8 rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 flex items-center justify-center gap-3 group"
             >
               Ir a WhatsApp

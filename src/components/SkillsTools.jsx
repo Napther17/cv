@@ -10,7 +10,7 @@ const SkillsTools = () => {
     {
       name: "Gestión y Diseño",
       icon: "bar_chart",
-      skills: ["SAP ERP", "Microsoft Excel (Avanzado)", "Illustrator", "Photoshop", "Lightroom", "PowerPoint"]
+      skills: ["SAP ERP", "Microsoft Excel", "Illustrator", "Photoshop", "Lightroom", "PowerPoint"]
     },
     {
       name: "Vanguardia Tech",
